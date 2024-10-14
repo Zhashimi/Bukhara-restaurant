@@ -1,0 +1,63 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  HomeLayout,
+  Location,
+  Menu,
+  Contact,
+  Error,
+  Home,
+  SinglePageError,
+  Meal,
+} from "./pages";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { action as contactAction } from "./pages/Contact";
+import { loader as landingLoader } from "./pages/Menu";
+import { loader as singleMealLoader } from "./pages/Meal";
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5,
+    },
+  },
+});
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeLayout />,
+    errorElement: <Error />,
+    children: [
+      { index: true, element: <Home /> },
+      {
+        path: "menu",
+        loader: landingLoader(queryClient),
+        errorElement: <SinglePageError />,
+        element: <Menu />,
+      },
+      {
+        path: "meals/:id",
+        errorElement: <SinglePageError />,
+        loader: singleMealLoader(queryClient),
+        element: <Meal />,
+      },
+      {
+        path: "location",
+        element: <Location />,
+        errorElement: <SinglePageError />,
+      },
+      {
+        path: "contact",
+        action: contactAction,
+        element: <Contact />,
+      },
+    ],
+  },
+]);
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
+};
+export default App;

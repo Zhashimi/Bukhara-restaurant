@@ -1,0 +1,54 @@
+{
+  "menuItems": [
+    {
+      "id": 1,
+      "name": "Chicken Karahi",
+      "image": "/images/menuItem.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Chicken Wings",
+      "image": "/images/menuItem1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Mango Shake",
+      "image": "/images/menuItem2.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Sikandari Ran",
+      "image": "/images/menuItem3.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Special Dogh",
+      "image": "/images/menuItem4.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Bukhara Special Salad",
+      "image": "/images/menuItem5.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Fish Kabab",
+      "image": "/images/menuItem6.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Nuggets",
+      "image": "/images/menuItem7.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Zinger Burger",
+      "image": "/images/menuItem8.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Mutton Chops",
+      "image": "/images/menuItem9.jpg"
+    }
+  ]
+}
