@@ -6,3 +6,4 @@ export { default as Contact } from "./Contact";
 export { default as Home } from "./Home";
 export { default as SinglePageError } from "./SinglePageError";
 export { default as Meal } from "./Meal";
+export { default as Cart } from "./Cart";

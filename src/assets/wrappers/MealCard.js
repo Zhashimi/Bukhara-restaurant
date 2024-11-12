@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 const Wrapper = styled.article`
   background: var(--white);
   box-shadow: var(--shadow-2);
@@ -26,6 +26,22 @@ const Wrapper = styled.article`
     p {
       margin-bottom: 1rem;
       color: var(--grey-500);
+    }
+  }
+
+  .footer-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .cart {
+      font-size: 1.5rem;
+      color: var(--primary-500);
+      background-color: transparent;
+      border-color: transparent;
+      cursor: pointer;
+      :hover {
+        color: var(--primary-700);
+      }
     }
   }
 `;

@@ -8,6 +8,7 @@ import {
   Home,
   SinglePageError,
   Meal,
+  Cart,
 } from "./pages";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { action as contactAction } from "./pages/Contact";
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
         path: "contact",
         action: contactAction,
         element: <Contact />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
       },
     ],
   },

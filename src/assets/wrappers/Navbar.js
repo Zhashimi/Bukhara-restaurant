@@ -52,6 +52,30 @@ const Wrapper = styled.nav`
     display: none;
   }
 
+  .cart {
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 2rem;
+    color: var(--primary-500);
+    z-index: 100;
+    padding: 0.5rem;
+    :hover {
+      color: var(--primary-700);
+    }
+  }
+  .cart-container {
+    position: absolute;
+    right: 2px;
+  }
+  .total-amount {
+    position: absolute;
+    margin-top: 1px;
+    padding: 5px;
+    margin-left: 30px;
+    color: #a8824e;
+    background-color: #2c1f0f;
+    border-radius: 1rem;
+  }
   @media screen and (min-width: 800px) {
     height: 130px;
     .nav-toggle {
@@ -62,6 +86,9 @@ const Wrapper = styled.nav`
     }
     .nav-header {
       padding: 0;
+    }
+    .cart-container {
+      right: 18%;
     }
     .nav-center {
       max-width: 1170px;
