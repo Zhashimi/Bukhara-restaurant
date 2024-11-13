@@ -1,7 +1,7 @@
 import React from "react";
 import Social from "./Social";
 import Wrapper from "../assets/wrappers/Footer";
-import Pages from "./pages";
+import Pages from "./Pages";
 
 const Footer = () => {
   return (
