@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { FaBars } from "react-icons/fa";
 import logo from "../assets/images/logo.jpg";
 import Wrapper from "../assets/wrappers/Navbar";
-import Pages from "./pages";
+import Pages from "./Pages";
 import Social from "./Social";
 import { FaShoppingCart } from "react-icons/fa";
 
