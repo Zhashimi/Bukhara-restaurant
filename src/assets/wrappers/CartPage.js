@@ -2,8 +2,12 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  min-height: calc(60vh - 120px);
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 1.5rem 1.5rem;
+  max-width: var(--fixed-width);
 
   h2 {
     color: var(--grey-700);
@@ -21,7 +25,7 @@ const Wrapper = styled.section`
   width: 90vw;
   margin: 0 auto;
   margin-top: 40px;
-  padding: 2.5rem 0;
+  padding: 1.5rem 1.5rem;
   max-width: var(--fixed-width);
   h2 {
     text-transform: uppercase;

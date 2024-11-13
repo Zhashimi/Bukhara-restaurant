@@ -2,9 +2,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Wrapper, { Header } from "../assets/wrappers/CartPage";
 import CartItem from "../components/CartItem";
-import { clearCart } from "../redux/features/CartSlice";
 import { useDispatch } from "react-redux";
 import { getTotalPrice, getTotalQuantity } from "../functions";
+import { openModal } from "../redux/features/ModalSlice";
 const Cart = () => {
   const { cartItems } = useSelector((store) => store.cart);
   const dispatch = useDispatch();
@@ -32,12 +32,11 @@ const Cart = () => {
       <hr />
       <footer>
         <h4>
-          Total <span>${getTotalPrice(cartItems) || 0}</span>
+          Total <span>${getTotalPrice(cartItems).toFixed(2) || 0}</span>
         </h4>
-        <button className="clear-btn" onClick={() => dispatch(clearCart())}>
+        <button className="clear-btn" onClick={() => dispatch(openModal())}>
           Clear Cart
         </button>
-        <button className="confirm-btn">Confirm</button>
       </footer>
     </Wrapper>
   );

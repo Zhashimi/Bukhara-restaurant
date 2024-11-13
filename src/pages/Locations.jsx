@@ -6,7 +6,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
 const Locations = () => {
   return (
-    <APIProvider>
+    <APIProvider apiKey={apiKey}>
       <div className="container">
         <SearchMap />
         <DestMaps />

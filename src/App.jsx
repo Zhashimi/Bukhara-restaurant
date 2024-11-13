@@ -14,6 +14,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { action as contactAction } from "./pages/Contact";
 import { loader as landingLoader } from "./pages/Menu";
 import { loader as singleMealLoader } from "./pages/Meal";
+import Modal from "./components/Modal";
+import { useSelector } from "react-redux";
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -59,9 +62,13 @@ const router = createBrowserRouter([
   },
 ]);
 const App = () => {
+  const { isOpen } = useSelector((store) => store.modal);
+  console.log(isOpen);
+
   return (
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
+      {isOpen && <Modal />}
     </QueryClientProvider>
   );
 };

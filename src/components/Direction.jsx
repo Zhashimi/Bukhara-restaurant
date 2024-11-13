@@ -43,7 +43,8 @@ const Direction = () => {
         setRoutes(response.routes);
       })
       .catch((error) => {
-        toast.error("Could not find the address you entered");
+        toast.error("Could not find the address you entered!!!");
+        toast.info("You can use Google Map to find your direction.");
       });
   }, [directionsRenderer, directionServices, start, destination]);
 

@@ -3,11 +3,7 @@ import Wrapper from "../assets/wrappers/MealList";
 import MenuItem from "./MenuItem";
 import itemImage from "../assets/images/menuItem.jpg";
 import { useDispatch } from "react-redux";
-import {
-  addItemToCart,
-  removeItemFromCart,
-  clearCart,
-} from "../redux/features/CartSlice";
+import { addItemToCart } from "../redux/features/CartSlice";
 const MenuList = ({ meals }) => {
   if (!meals) {
     return <h4 style={{ textAlign: "center" }}>No matching meal found...</h4>;

@@ -65,17 +65,17 @@ const Wrapper = styled.nav`
   }
   .cart-container {
     position: absolute;
-    right: 2px;
+    right: 1px;
   }
   .total-amount {
     position: absolute;
-    margin-top: 1px;
-    padding: 5px;
+    padding: 4px;
     margin-left: 30px;
     color: #a8824e;
     background-color: #2c1f0f;
-    border-radius: 1rem;
+    border-radius: var(--borderRadius);
   }
+
   @media screen and (min-width: 800px) {
     height: 130px;
     .nav-toggle {

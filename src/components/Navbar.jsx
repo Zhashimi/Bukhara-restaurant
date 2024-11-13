@@ -4,7 +4,8 @@ import logo from "../assets/images/logo.jpg";
 import Wrapper from "../assets/wrappers/Navbar";
 import Pages from "./pages";
 import Social from "./Social";
-import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { FaShoppingCart } from "react-icons/fa";
+
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getTotalQuantity } from "../functions";
@@ -33,7 +34,7 @@ const Navbar = () => {
             {" "}
             <p className="total-amount">{getTotalQuantity(cartItems) || 0}</p>
             <Link to={"/cart"} className="cart">
-              <HiOutlineShoppingBag />
+              <FaShoppingCart />
             </Link>
             <button className="nav-toggle" onClick={toggleLinks}>
               <FaBars />
