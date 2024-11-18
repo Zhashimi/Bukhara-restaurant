@@ -218,7 +218,7 @@ ul {
 .form-label {
   display: block;
   font-size: var(--small-text);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   text-transform: capitalize;
   letter-spacing: var(--letterSpacing);
 }
@@ -226,10 +226,11 @@ ul {
 .form-textarea {
   width: 100%;
   padding: 0.475rem 0.75rem;
-  border-radius: var(--borderRadius);
+  border-radius: 5px;
   background: var(--backgroundColor);
   border: 1px solid var(--grey-200);
   display: block;
+  margin-bottom: 1rem;
 }
 input:focus {
   border-color: 1px solid var(--primary-300);
@@ -323,5 +324,28 @@ PROJECT CSS
   }
   .address {
     margin-top: 2rem;
+  }
+}
+
+section {
+  min-height: calc(60vh - 120px);
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 1.5rem 1.5rem;
+  max-width: var(--fixed-width);
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  color: var(--grey-600);
+}
+@media screen and (min-width: 800px) {
+  .order-form {
+    flex-direction: row;
   }
 }

@@ -21,12 +21,7 @@ export const Header = styled.header`
 
 const Wrapper = styled.section`
   text-align: center;
-  min-height: calc(100vh - 120px);
-  width: 90vw;
-  margin: 0 auto;
-  margin-top: 40px;
-  padding: 1.5rem 1.5rem;
-  max-width: var(--fixed-width);
+
   h2 {
     text-transform: uppercase;
     text-align: center;

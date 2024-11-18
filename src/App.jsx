@@ -9,9 +9,11 @@ import {
   SinglePageError,
   Meal,
   Cart,
+  Order,
 } from "./pages";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { action as contactAction } from "./pages/Contact";
+import { action as orderAction } from "./pages/Order";
 import { loader as landingLoader } from "./pages/Menu";
 import { loader as singleMealLoader } from "./pages/Meal";
 import Modal from "./components/Modal";
@@ -58,12 +60,17 @@ const router = createBrowserRouter([
         path: "cart",
         element: <Cart />,
       },
+      ,
+      {
+        path: "order",
+        element: <Order />,
+        action: orderAction,
+      },
     ],
   },
 ]);
 const App = () => {
   const { isOpen } = useSelector((store) => store.modal);
-  console.log(isOpen);
 
   return (
     <QueryClientProvider client={queryClient}>

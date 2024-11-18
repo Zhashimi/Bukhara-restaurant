@@ -5,6 +5,7 @@ import CartItem from "../components/CartItem";
 import { useDispatch } from "react-redux";
 import { getTotalPrice, getTotalQuantity } from "../functions";
 import { openModal } from "../redux/features/ModalSlice";
+import { Link } from "react-router-dom";
 const Cart = () => {
   const { cartItems } = useSelector((store) => store.cart);
   const dispatch = useDispatch();
@@ -36,6 +37,9 @@ const Cart = () => {
         </h4>
         <button className="clear-btn" onClick={() => dispatch(openModal())}>
           Clear Cart
+        </button>
+        <button className="confirm-btn">
+          <Link to="/order">check out</Link>
         </button>
       </footer>
     </Wrapper>

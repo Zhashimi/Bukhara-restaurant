@@ -68,6 +68,18 @@ const Contact = () => {
           placeholder="+(1)111-4444"
         />
       </div>
+      <div className="form-row">
+        <label htmlFor="suggestion" className="form-label">
+          Question/Suggestion:
+        </label>
+        <textarea
+          name="suggestion"
+          className="form-input"
+          id="suggestion"
+          placeholder="Your question or suggestion..."
+          rows={5}
+        />
+      </div>
       <button
         type="submit"
         className="btn btn-block"

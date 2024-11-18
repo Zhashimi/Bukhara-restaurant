@@ -19,7 +19,7 @@ const Error = () => {
   return (
     <Wrapper>
       <div>
-        <h3>something went wrong</h3>
+        <h3>something went wrong{error.message}</h3>
       </div>
     </Wrapper>
   );
