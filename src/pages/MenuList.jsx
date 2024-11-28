@@ -33,17 +33,19 @@ const MenuList = ({ meals }) => {
     dispatch(addItemToCart(meal));
   };
   return (
-    <Wrapper>
-      {formattedMeals.map((meal) => {
-        return (
-          <MenuItem
-            key={meal.id}
-            meal={meal}
-            handleAddToCart={handleAddToCart}
-          />
-        );
-      })}
-    </Wrapper>
+    <section className="page">
+      <Wrapper>
+        {formattedMeals.map((meal) => {
+          return (
+            <MenuItem
+              key={meal.id}
+              meal={meal}
+              handleAddToCart={handleAddToCart}
+            />
+          );
+        })}
+      </Wrapper>
+    </section>
   );
 };
 

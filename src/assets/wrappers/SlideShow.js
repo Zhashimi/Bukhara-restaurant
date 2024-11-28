@@ -1,27 +1,26 @@
 import styled from "styled-components";
 
-const Wrapper = styled.section`
-  margin: 0 auto;
-  margin-top: 3rem;
-  width: 80vw;
-  max-width: 800px;
+const Wrapper = styled.div`
   position: relative;
+
   height: 300px;
-  overflow: hidden;
-  padding-top: 2rem;
+  width: 100%;
+  max-width: var(--fixed-width);
   .slide {
     text-align: center;
     position: absolute;
-    top: 0;
+    top: 10;
     left: 0;
     width: 100%;
     height: 100%;
     transition: var(--transition);
+    padding: 1rem 0;
   }
   .slider-image {
-    height: 260px;
-    width: 80vw;
-    max-width: 800px;
+    height: 230px;
+    width: 96%;
+    max-height: 800px;
+    max-width: 1000px;
     border-radius: var(--borderRadius);
     box-shadow: var(--shadow-2);
   }
@@ -34,7 +33,7 @@ const Wrapper = styled.section`
   .prev,
   .next {
     position: absolute;
-    top: 200px;
+    top: 40%;
     background: var(--grey-500);
     color: var(--white);
     width: 1.25rem;
@@ -58,8 +57,6 @@ const Wrapper = styled.section`
   }
   @media screen and (min-width: 800px) {
     height: 700px;
-    width: 900px;
-
     .prev,
     .next {
       width: 2rem;
@@ -68,7 +65,6 @@ const Wrapper = styled.section`
     }
     .slider-image {
       height: 500px;
-      width: 700px;
     }
   }
   .next-slide {

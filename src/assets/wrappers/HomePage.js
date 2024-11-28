@@ -5,10 +5,11 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   .hero {
     max-height: 800px;
-    max-width: 80vw;
-    border-radius: 2rem;
+    width: 100%;
+    border-radius: var(--borderRadius);
   }
   .title {
     letter-spacing: var(--letter-spacing);
@@ -23,6 +24,9 @@ const Wrapper = styled.section`
     font-size: 20px;
   }
   @media screen and (max-width: 800px) {
+    .hero {
+      max-width: var(--fixed-width);
+    }
     p {
       margin: 5px;
     }

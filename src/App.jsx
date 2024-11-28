@@ -12,8 +12,8 @@ import {
   Order,
 } from "./pages";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { action as contactAction } from "./pages/Contact";
-import { action as orderAction } from "./pages/Order";
+import { action as contactAction } from "./utils/ContactAction";
+import { action as orderAction } from "./utils/OrderAction";
 import { loader as landingLoader } from "./pages/Menu";
 import { loader as singleMealLoader } from "./pages/Meal";
 import Modal from "./components/Modal";

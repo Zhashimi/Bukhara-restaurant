@@ -52,7 +52,7 @@ html {
   --letterSpacing: 2px;
   --transition: 0.3s ease-in-out all;
   --max-width: 1420px;
-  --fixed-width: 800px;
+  --fixed-width: 1200px;
   --view-width: 96vw;
   --color-white: #f9f0f0;
   /* box shadow*/
@@ -208,12 +208,9 @@ ul {
 
 .form {
   width: 100%;
-  max-width: var(--fixed-width);
-  background: var(--white);
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-2);
   padding: 2rem 2.5rem;
-  margin: 3rem auto;
 }
 .form-label {
   display: block;
@@ -294,27 +291,23 @@ PROJECT CSS
   padding: 2rem 2rem;
 }
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  text-align: center;
 }
 
 .map-container {
-  width: 90%;
+  width: 100%;
   height: 200px;
   box-shadow: var(--shadow-3);
   border: 1px solid var(--grey-300);
   position: relative;
-  margin: 1rem;
+  margin: 1rem 0;
   border-radius: var(--borderRadius);
 }
 .address {
-  margin-top: 10px;
+  margin: 1rem 0;
 }
 @media (min-width: 800px) {
   .map-container {
-    width: 70%;
     height: 500px;
   }
   .direction-container {
@@ -328,12 +321,12 @@ PROJECT CSS
 }
 
 section {
-  min-height: calc(60vh - 120px);
   width: 90vw;
+  height: fit-content;
   margin: 0 auto;
   margin-top: 40px;
   padding: 1.5rem 1.5rem;
-  max-width: var(--fixed-width);
+  max-width: 1200px;
 }
 
 .order-form {

@@ -64,8 +64,7 @@ const Wrapper = styled.nav`
     }
   }
   .cart-container {
-    position: absolute;
-    right: 1px;
+    margin: 2rem;
   }
   .total-amount {
     position: absolute;
@@ -86,9 +85,6 @@ const Wrapper = styled.nav`
     }
     .nav-header {
       padding: 0;
-    }
-    .cart-container {
-      right: 18%;
     }
     .nav-center {
       max-width: 1170px;

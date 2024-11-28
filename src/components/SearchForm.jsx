@@ -12,6 +12,7 @@ const SearchForm = ({ searchTerm }) => {
           type="search"
           name="searchTerm"
           className="form-input"
+          placeholder="Search your favorite meal..."
           defaultValue={searchTerm}
         />
         <button type="submit" className="btn">

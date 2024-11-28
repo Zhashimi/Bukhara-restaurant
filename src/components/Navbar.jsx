@@ -29,17 +29,17 @@ const Navbar = () => {
     <Wrapper>
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} className="logo" alt="logo" />
+          <img src={logo} className="logo" alt="logo" />{" "}
           <div className="cart-container">
             {" "}
             <p className="total-amount">{getTotalQuantity(cartItems) || 0}</p>
             <Link to={"/cart"} className="cart">
               <FaShoppingCart />
             </Link>
-            <button className="nav-toggle" onClick={toggleLinks}>
-              <FaBars />
-            </button>{" "}
           </div>
+          <button className="nav-toggle" onClick={toggleLinks}>
+            <FaBars />
+          </button>{" "}
         </div>
 
         <div
@@ -47,8 +47,10 @@ const Navbar = () => {
           ref={linksContainerRef}
           style={linkStyles}
         >
+          {" "}
           <Pages linksRef={linksRef} />
         </div>
+
         {/* social links */}
         <Social />
       </div>
